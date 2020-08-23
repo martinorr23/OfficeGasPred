@@ -1,5 +1,7 @@
-hdfs dfs -rm -r /user/hduser/SSP/OfficeOut
+hdfs dfs -mkdir /SSPProj
+wget https://x19155662timeseries.s3.amazonaws.com/OfficeData2.csv
+hdfs dfs -copyFromLocal OfficeData2.csv /SSPProj
 mapred streaming -mapper ./tsmapper.py -combiner ./tscombiner.py -reducer ./tsreducer.py \
--input /user/hduser/SSPCopy -output /user/hduser/SSP/OfficeOut --cmdenv window_size=5
+-input /SSPProj -output /SSProjOut --cmdenv window_size=5
 rm part-00000
 hdfs dfs -get /user/hduser/SSP/OfficeOut/part-00000 .
