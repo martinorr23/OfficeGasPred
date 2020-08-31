@@ -2,6 +2,7 @@ chmod +x tsmapper.py
 chmod +x tscombiner.py
 chmod +x tsreducer.py
 hdfs dfs -rm -r /SSPProj
+hdfs dfs -rm -r /SSPProjOut
 hdfs dfs -mkdir /SSPProj
 wget https://x19155662timeseries.s3.amazonaws.com/OfficeData2.csv
 hdfs dfs -copyFromLocal OfficeData2.csv /SSPProj
