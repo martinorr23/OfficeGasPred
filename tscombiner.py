@@ -11,7 +11,7 @@ window_size = int(os.environ['window_size'])
 window = WindowArray(window_size)
 
 for record in sys.stdin:
-    try: 
+    try:
         date_time_string, Gas = record.rstrip(os.linesep).split('\t')
         Gas = Decimal(Gas)
         window.append(Gas)
