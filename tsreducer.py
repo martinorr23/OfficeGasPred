@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 #tsreducer.py
+
 import os
 import sys
 from datetime import timedelta, datetime
@@ -9,6 +10,7 @@ from tswindow import WindowArray
 
 window_size = int(os.environ['window_size'])
 last_observation = ''
+
 window = WindowArray(window_size)
 
 print('Date,Forecast for t+1,Actual')
