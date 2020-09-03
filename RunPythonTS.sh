@@ -7,8 +7,9 @@ hdfs dfs -rm -r /SSPProjOutFour
 hdfs dfs -rm -r /SSPProjOutFive
 hdfs dfs -rm -r /SSPProjOutSix
 wget https://x19155662timeseries.s3.amazonaws.com/OfficeDataMR.csv
-hdfs dfs -mkdir /SSPProj/
-hdfs dfs -copyFromLocal /SSPProj/OfficeDataMR.csv 
+hdfs dfs -rm -r /SSPProj
+hdfs dfs -mkdir /SSPProj
+hdfs dfs -copyFromLocal OfficeDataMR.csv /SSPProj
 
 #Hadoop streaming command, window size:2
 hadoop jar /usr/lib/hadoop/hadoop-streaming.jar \
