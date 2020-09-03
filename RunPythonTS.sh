@@ -6,11 +6,6 @@ hdfs dfs -rm -r /SSPProjOutThree
 hdfs dfs -rm -r /SSPProjOutFour
 hdfs dfs -rm -r /SSPProjOutFive
 hdfs dfs -rm -r /SSPProjOutSix
-hdfs dfs -mkdir /SSPProjTwo
-hdfs dfs -mkdir /SSPProjOutThree
-hdfs dfs -mkdir /SSPProjOutFour
-hdfs dfs -mkdir /SSPProjOutFive
-hdfs dfs -mkdir /SSPProjOutSix
 wget https://x19155662timeseries.s3.amazonaws.com/OfficeDataMR.csv
 hdfs dfs -copyFromLocal OfficeDataMR.csv /SSPProj
 
