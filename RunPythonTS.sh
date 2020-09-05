@@ -76,5 +76,9 @@ hadoop jar /usr/lib/hadoop/hadoop-streaming.jar \
 -output /SSPProjOutSix \
 -cmdenv window_size=6
 
+hadoop fs -getmerge /SSPProjOutTwo /home/hadoop/output/Two.csv
+hadoop fs -getmerge /SSPProjOutThree /home/hadoop/output/Three.csv
+hadoop fs -getmerge /SSPProjOutFour /home/hadoop/output/Four.csv
+hadoop fs -getmerge /SSPProjOutFive /home/hadoop/output/Five.csv
 hadoop fs -getmerge /SSPProjOutSix /home/hadoop/output/Six.csv
 #hdfs dfs -get /user/hduser/SSP//SSPProjOutSix/part-00000 .
