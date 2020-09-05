@@ -81,4 +81,5 @@ hadoop fs -getmerge /SSPProjOutThree /home/hadoop/output/Three.csv
 hadoop fs -getmerge /SSPProjOutFour /home/hadoop/output/Four.csv
 hadoop fs -getmerge /SSPProjOutFive /home/hadoop/output/Five.csv
 hadoop fs -getmerge /SSPProjOutSix /home/hadoop/output/Six.csv
+aws s3 cp /home/hadoop/output/* s3://x19155662timeseries/
 #hdfs dfs -get /user/hduser/SSP//SSPProjOutSix/part-00000 .
