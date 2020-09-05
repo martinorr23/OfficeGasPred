@@ -13,6 +13,7 @@ hdfs dfs -copyFromLocal OfficeDataMR.csv /SSPProj
 
 #Hadoop streaming command, window size:2
 hadoop jar /usr/lib/hadoop/hadoop-streaming.jar \
+-D mapred.reduce.tasks=1 \
 -file tsmapper.py \
 -file tsreducer.py \
 -file tscombiner.py \
@@ -25,6 +26,7 @@ hadoop jar /usr/lib/hadoop/hadoop-streaming.jar \
 
 #Hadoop streaming command, window size:3
 hadoop jar /usr/lib/hadoop/hadoop-streaming.jar \
+-D mapred.reduce.tasks=1 \
 -file tsmapper.py \
 -file tsreducer.py \
 -file tscombiner.py \
@@ -37,6 +39,7 @@ hadoop jar /usr/lib/hadoop/hadoop-streaming.jar \
 
 #Hadoop streaming command, window size:4
 hadoop jar /usr/lib/hadoop/hadoop-streaming.jar \
+-D mapred.reduce.tasks=1 \
 -file tsmapper.py \
 -file tsreducer.py \
 -file tscombiner.py \
@@ -49,6 +52,7 @@ hadoop jar /usr/lib/hadoop/hadoop-streaming.jar \
 
 #Hadoop streaming command, window size:5
 hadoop jar /usr/lib/hadoop/hadoop-streaming.jar \
+-D mapred.reduce.tasks=1 \
 -file tsmapper.py \
 -file tsreducer.py \
 -file tscombiner.py \
@@ -61,6 +65,7 @@ hadoop jar /usr/lib/hadoop/hadoop-streaming.jar \
 
 #Hadoop streaming command, window size:6
 hadoop jar /usr/lib/hadoop/hadoop-streaming.jar \
+-D mapred.reduce.tasks=1 \
 -file tsmapper.py \
 -file tsreducer.py \
 -file tscombiner.py \
